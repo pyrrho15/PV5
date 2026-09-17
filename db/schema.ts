@@ -65,7 +65,6 @@ export const blog = pgTable("blog", {
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
-
 export const work = pgTable("work", {
     id: serial("id").primaryKey(),
     ownerId: integer("owner_id").notNull().references(() => me.id, { onDelete: "cascade" }),
