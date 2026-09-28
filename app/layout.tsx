@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./_utils/Header";
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
@@ -14,7 +15,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="min-w-screen h-screen relative">
-
         <svg className="absolute mask-r-from-50% mask-l-from-50% inset-0 w-full h-full -z-1">
           <defs>
             <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
@@ -23,14 +23,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
-
-        <div className="h-screen max-w-3xl mx-auto border-x-0">
-          <Header />
-          <div className="px-4 mt-8">
-            {children}
+        <TooltipProvider>
+          <div className="h-screen max-w-3xl mx-auto border-x-0">
+            <Header />
+            <div className="px-4 mt-8">
+              {children}
+            </div>
           </div>
-        </div>
-
+        </TooltipProvider>
       </body>
     </html>
   );

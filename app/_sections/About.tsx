@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Socials from "../_utils/Socials";
 
 export default function About() {
     return (
@@ -12,11 +13,13 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="font-sans text-md flex flex-col gap-y-3 text-[#282828] text-balance">
+            <div className="font-sans text-md flex flex-col gap-y-3 text-[#282828] md:text-balance">
                 <h2>I build full-stack applications, handling everything from design to deployment. I love exploring both the software and hardware worlds, and sometimes, I just don’t do anything at all.
                 </h2>
-                <h2>Currently working with TypeScript, Next.js, Tailwind CSS and bit of Arduino.</h2>
+                <h2>Currently working with Next.js, Arduino and learning design.</h2>
             </div>
+
+            <Socials />
         </section>
     )
 }
