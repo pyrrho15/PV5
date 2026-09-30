@@ -13,7 +13,7 @@ import { HugeiconsIcon } from "@hugeicons/react"
 
 export default function Socials() {
   return (
-    <div className="flex items-center gap-3 mt-0 text-gray-600/90 *:hover:text-gray-900 *:cursor-pointer transition-transform duration-300 ease-in-out flex-wrap *:hover:scale-110">
+    <section className="flex items-center gap-3 mt-0 text-neutral-600/90 *:hover:text-neutral-900 *:cursor-pointer transition-transform duration-300 ease-in-out flex-wrap *:hover:scale-110">
       <Tooltip>
         <TooltipTrigger>
             <a href="https://github.com/pyrrho15" target="_blank">
@@ -52,6 +52,6 @@ export default function Socials() {
           <p>Resume</p>
         </TooltipContent>
       </Tooltip>
-    </div>
+    </section>
   )
 }

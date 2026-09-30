@@ -8,8 +8,8 @@ export default function About() {
                 <Image className="rounded-xl border-2 border-gray-300" src="/icons/me.png" loading="eager" alt="Pyrrho" width={100} height={100} />
                 <div className="flex flex-col gap-y-0.5">
                     <h1 className="text-2xl font-sans tracking-tighter font-medium">Mahesh Kumar G</h1>
-                    <h3 className="text-[16px] font-sans text-gray-600/80 tracking-tight">Engineer.</h3>
-                    <p className="text-[13px] font-sans tracking-tight text-gray-600/90">21, Karnataka, India</p>
+                    <h3 className="text-[16px] font-sans text-neutral-500/90 tracking-tight">Engineer.</h3>
+                    <p className="text-[13px] font-sans tracking-tight text-neutral-500/80">21, Karnataka, India</p>
                 </div>
             </div>
 
