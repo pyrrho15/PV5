@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "../styles/tailwind-utils.css";
 import Header from "./_utils/Header";
 import { TooltipProvider } from "@/components/ui/tooltip"
 
