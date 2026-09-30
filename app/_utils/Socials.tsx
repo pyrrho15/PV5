@@ -13,11 +13,11 @@ import { HugeiconsIcon } from "@hugeicons/react"
 
 export default function Socials() {
   return (
-    <div className="flex items-center gap-4 -mt-2 text-gray-600/90 *:hover:text-gray-900 *:cursor-pointer transition-transform duration-300 ease-in-out flex-wrap *:hover:scale-110">
+    <div className="flex items-center gap-3 mt-0 text-gray-600/90 *:hover:text-gray-900 *:cursor-pointer transition-transform duration-300 ease-in-out flex-wrap *:hover:scale-110">
       <Tooltip>
         <TooltipTrigger>
             <a href="https://github.com/pyrrho15" target="_blank">
-          <HugeiconsIcon icon={Github01Icon} color="currentColor" size={22} />
+          <HugeiconsIcon icon={Github01Icon} color="currentColor" size={20} />
             </a>
         </TooltipTrigger>
         <TooltipContent>
