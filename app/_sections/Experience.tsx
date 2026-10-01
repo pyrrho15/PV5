@@ -1,31 +1,5 @@
 import Image from "next/image";
-
-const experience = [
-    {
-        company: "Stealth",
-        img: "",
-        position: "App Developer",
-        location: "Remote, Intern",
-        period: "July 2026 - Present",
-        description: [
-            "Architected and developed an internal tool into a production-ready SaaS product.",
-            "Built an AI-powered content planner that helped creators plan and schedule their posts.",
-            "Collaborated with the team as a backend developer to build an e-commerce platform for a client."
-        ]
-    },
-    {
-        company: "Adversity Solutions",
-        img: "/work/adversity.png",
-        position: "Full Stack Developer",
-        location: "Remote, Intern",
-        period: "Nov 2025 - May 2026",
-        description: [
-            "Architected and developed an internal tool into a production-ready SaaS product.",
-            "Built an AI-powered content planner that helped creators plan and schedule their posts.",
-            "Collaborated with the team as a backend developer to build an e-commerce platform for a client."
-        ]
-    }
-]
+import { experience } from "@/lib/array";
 
 export default function Experience() {
     return (

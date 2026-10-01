@@ -3,32 +3,9 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ChevronsRight } from "lucide-react"
 import { useRef } from 'react';
+import { writings } from "@/lib/array";
 
 export default function Writings() {
-
-    const writings = [
-        {
-            name: "Effeciency of 100 Lines of Code",
-            description: "Does writing more lines of code mean better performance?",
-            link: "https://magicalcodelines.hashnode.dev/the-secret-efficiency-of-100-lines-of-code"
-        },
-        {
-            name: "Time Simplicity",
-            description: "Quick go-through about time complexity",
-            link: "https://time-simplicity.hashnode.dev/time-simplicity"
-        },
-        {
-            name: "Dockerfile Simplified",
-            description: "Dockerfile commands",
-            link: "https://understand-dockerfile.hashnode.dev/simplifying-dockerfile-commands"
-        },
-        {
-            name: "Understanding React Lifecycles",
-            description: "Learn how React works internally and manages component lifecycles",
-            link: "https://medium.com/@maheshh.kumar1508/react-lifecycle-is-easy-33bb40fbb82e"
-        },
-    ]
-
     const container = useRef<HTMLDivElement>(null)
 
     const { contextSafe } = useGSAP({ scope: container })

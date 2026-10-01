@@ -1,32 +1,5 @@
 import Image from "next/image";
-
-const tech_stack = [
-  { name: "JavaScript", imgURL: "/tech-stack/javascript.svg" },
-  { name: "Python", imgURL: "/tech-stack/python.svg" },
-  { name: "TypeScript", imgURL: "/tech-stack/typescript.svg" },
-  { name: "Next.js", imgURL: "/tech-stack/nextjs.svg" },
-  { name: "React", imgURL: "/tech-stack/reactjs.svg" },
-  { name: "React Native", imgURL: "/tech-stack/reactnative.svg" },
-  { name: "Express.js", imgURL: "/tech-stack/expressjs.svg" },
-  { name: "Expo", imgURL: "/tech-stack/expo.svg" },
-  { name: "FastAPI", imgURL: "/tech-stack/fastapi.svg" },
-  { name: "MongoDB", imgURL: "/tech-stack/mongodb.svg" },
-  { name: "Mongoose", imgURL: "/tech-stack/mongoose.svg" },
-  { name: "PostgreSQL", imgURL: "/tech-stack/postgresql.svg" },
-  { name: "NeonDB", imgURL: "/tech-stack/neondb.svg" },
-  { name: "Firebase", imgURL: "/tech-stack/firebase.svg" },
-  { name: "Better Auth", imgURL: "/tech-stack/better-auth.svg" },
-  { name: "Docker", imgURL: "/tech-stack/docker.svg" },
-  { name: "Drizzle", imgURL: "/tech-stack/drizzle.svg" },
-  { name: "Git", imgURL: "/tech-stack/git.svg" },
-  { name: "GitHub", imgURL: "/tech-stack/github.svg" },
-  { name: "GSAP", imgURL: "/tech-stack/gsap.svg" },
-  { name: "LangChain", imgURL: "/tech-stack/langchain.svg" },
-  { name: "MCP", imgURL: "/tech-stack/mcp.svg" },
-  { name: "n8n", imgURL: "/tech-stack/n8n.svg" },
-  { name: "Postman", imgURL: "/tech-stack/postman.svg" },
-  { name: "Tailwind CSS", imgURL: "/tech-stack/tailwindcss.svg" },
-];
+import { tech_stack } from "@/lib/array";
 
 export default function TechStack() {
   return (
