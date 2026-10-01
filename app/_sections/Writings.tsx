@@ -62,7 +62,7 @@ export default function Writings() {
 
     return (
         <section>
-            <div className="space-y-5">
+            <div className="space-y-7">
                 <h2 className="uppercase text-[16px] font-medium tracking-wide text-neutral-500">Writings</h2>
 
                 <div ref={container} className="space-y-6">
@@ -76,10 +76,10 @@ export default function Writings() {
                             onMouseLeave={(e) => handleLeave(e)}
                         >
                             <div className="flex items-center gap-1">
-                                <h3 className="group-hover:text-neutral-500/90 transition-colors duration-300 text-[#282828] text-[17px] font-medium tracking-tight">
+                                <h3 className="group-hover:text-neutral-500/90 transition-colors duration-300 text-black text-[17px] font-medium tracking-tight">
                                     {blog.name}
                                 </h3>
-                                <ChevronsRight size={21} strokeWidth={2} color="#282828cc" className="arrow shrink-0 -rotate-x-45 mt-1 -translate-x-4 opacity-0" />
+                                <ChevronsRight size={21} strokeWidth={2} color="blackcc" className="arrow shrink-0 -rotate-x-45 mt-1 -translate-x-4 opacity-0" />
                             </div>
 
                             <p className="text-neutral-500/90 text-[15px]">{blog.description}</p>
