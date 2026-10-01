@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
         <TooltipProvider>
-          <div className="h-screen max-w-3xl mx-auto border-x-0">
+          <div className="min-h-screen max-w-3xl mx-auto border-x-0">
             <Header />
             <div className="px-4 mt-8">
               {children}
