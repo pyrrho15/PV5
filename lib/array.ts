@@ -56,10 +56,16 @@ export const experience = [
     position: "App Developer",
     location: "Remote, Intern",
     period: "July 2026 - Present",
+    current: true,
     description: [
       "Architected and developed an internal tool into a production-ready SaaS product.",
       "Built an AI-powered content planner that helped creators plan and schedule their posts.",
       "Collaborated with the team as a backend developer to build an e-commerce platform for a client."
+    ],
+    techStack: [
+      { name: "Expo", imgURL: "/tech-stack/expo.svg" },
+      { name: "TypeScript", imgURL: "/tech-stack/typescript.svg" },
+      { name: "Firebase", imgURL: "/tech-stack/firebase.svg" }
     ]
   },
   {
@@ -68,10 +74,18 @@ export const experience = [
     position: "Full Stack Developer",
     location: "Remote, Intern",
     period: "Nov 2025 - May 2026",
+    current: false,
     description: [
       "Architected and developed an internal tool into a production-ready SaaS product.",
       "Built an AI-powered content planner that helped creators plan and schedule their posts.",
       "Collaborated with the team as a backend developer to build an e-commerce platform for a client."
+    ],
+    techStack: [
+      { name: "React", imgURL: "/tech-stack/reactjs.svg" },
+      { name: "Express.js", imgURL: "/tech-stack/expressjs.svg" },
+      { name: "Node.js", imgURL: "/tech-stack/nodejs.svg" },
+      { name: "MongoDB", imgURL: "/tech-stack/mongodb.svg" },
+      { name: "Tailwind CSS", imgURL: "/tech-stack/tailwindcss.svg" }
     ]
   }
 ];

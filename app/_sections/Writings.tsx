@@ -10,10 +10,10 @@ export default function Writings() {
 
     const { contextSafe } = useGSAP({ scope: container })
 
-    // useGSAP(()=>{
-    //     gsap.set(".arrow", { rotateZ: -40 })
-    // })
-
+    useGSAP(() => {
+        gsap.set(".arrow", { opacity: 0, x: -16 })
+    }, { scope: container })
+    
     const handleEnter = contextSafe((e: React.MouseEvent<HTMLAnchorElement>) => {
         const arrow = e.currentTarget.querySelector(".arrow")
         if (arrow) {
@@ -56,7 +56,7 @@ export default function Writings() {
                                 <h3 className="group-hover:text-neutral-500/90 transition-colors duration-300 text-black text-[17px] font-medium tracking-tight">
                                     {blog.name}
                                 </h3>
-                                <ChevronsRight size={21} strokeWidth={2} color="blackcc" className="arrow shrink-0 -rotate-x-45 mt-1 -translate-x-4 opacity-0" />
+                                <ChevronsRight size={21} strokeWidth={2} color="blackcc" className="arrow shrink-0 -rotate-x-45 mt-1" />
                             </div>
 
                             <p className="text-neutral-500/90 text-[15px]">{blog.description}</p>
