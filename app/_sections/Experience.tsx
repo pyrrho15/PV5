@@ -48,7 +48,7 @@ export default function Experience() {
                             {exp.techStack.map((tech) => (
                                 <Tooltip key={tech.name}>
                                     <TooltipTrigger>
-                                        <Image src={tech.imgURL} alt={tech.name} width={21} height={21} className="hover:scale-120 transition-all duration-300" />
+                                        <Image src={tech.imgURL} alt={tech.name} width={21} height={21} className="hover:scale-120 transition-all duration-300 cursor-pointer" />
                                     </TooltipTrigger>
                                     <TooltipContent>
                                         <p>{tech.name}</p>
