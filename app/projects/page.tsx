@@ -20,13 +20,15 @@ export default function ProjectsPage() {
         : projects.filter(project => project.tags.includes(selectedTag));
 
     return (
-        <div className="min-h-screen max-w-3xl mx-auto px-4 py-8">
+        <div className="min-h-screen max-w-3xl mx-auto px-4 py-2">
             <div className="flex items-center justify-between mb-8">
-                <h1 className="text-2xl font-medium tracking-tight">Projects</h1>
+
+                <h2 className="uppercase text-[16px] font-medium tracking-tight text-neutral-500">All Projects</h2>
+
                 <select
                     value={selectedTag}
                     onChange={(e) => setSelectedTag(e.target.value)}
-                    className="px-3 py-2 border border-neutral-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-neutral-500"
+                    className="px-2 py-2 border border-neutral-300 rounded-md text-[14px] bg-white text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-500"
                 >
                     <option value="all">All Tags</option>
                     {allTags.map((tag) => (
@@ -50,14 +52,28 @@ export default function ProjectsPage() {
                                 <h2 className="font-medium text-[18px]">{project.name}</h2>
                                 <div className="flex gap-2 text-neutral-600/90">
                                     {project.link[0] && (
-                                        <a href={project.link[0]} target="_blank" rel="noopener noreferrer">
-                                            <HugeiconsIcon size={22} strokeWidth={1.6} color="currentColor" icon={Link01Icon} />
-                                        </a>
+                                        <Tooltip>
+                                            <TooltipTrigger>
+                                                <a href={project.link[0]} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
+                                                    <HugeiconsIcon size={22} strokeWidth={1.6} color="currentColor" icon={Link01Icon} />
+                                                </a>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>Live Demo</p>
+                                            </TooltipContent>
+                                        </Tooltip>
                                     )}
                                     {project.link[1] && (
-                                        <a href={project.link[1]} target="_blank" rel="noopener noreferrer">
-                                            <HugeiconsIcon size={22} strokeWidth={1.6} color="currentColor" icon={Github01Icon} />
-                                        </a>
+                                        <Tooltip>
+                                            <TooltipTrigger>
+                                                <a href={project.link[1]} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
+                                                    <HugeiconsIcon size={22} strokeWidth={1.6} color="currentColor" icon={Github01Icon} />
+                                                </a>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>Source Code</p>
+                                            </TooltipContent>
+                                        </Tooltip>
                                     )}
                                 </div>
                             </div>
@@ -68,7 +84,7 @@ export default function ProjectsPage() {
                                     tech.imgURL && (
                                         <Tooltip key={tech.name}>
                                             <TooltipTrigger>
-                                                <Image src={tech.imgURL} alt={tech.name} width={23} height={23} />
+                                                <Image src={tech.imgURL} alt={tech.name} width={23} height={23} className="hover:scale-120 transition-all duration-300 cursor-pointer" />
                                             </TooltipTrigger>
                                             <TooltipContent>
                                                 <p>{tech.name}</p>

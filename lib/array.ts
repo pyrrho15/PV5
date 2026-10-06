@@ -24,6 +24,13 @@ export const tech_stack = [
   { name: "n8n", imgURL: "/tech-stack/n8n.svg" },
   { name: "Postman", imgURL: "/tech-stack/postman.svg" },
   { name: "Tailwind CSS", imgURL: "/tech-stack/tailwindcss.svg" },
+  { name: "Cloudflare", imgURL: "/tech-stack/cloudflare.svg" },
+  { name: "Electron", imgURL: "/tech-stack/electron.svg" },
+  { name: "Figma", imgURL: "/tech-stack/figma.svg" },
+  { name: "Gemini API", imgURL: "/tech-stack/gemini.svg" },
+  { name: "npm", imgURL: "/tech-stack/npm.svg" },
+  { name: "Supabase", imgURL: "/tech-stack/supabase.svg" },
+  { name: "Vercel", imgURL: "/tech-stack/vercel.svg" },
 ];
 
 export const writings = [
