@@ -27,8 +27,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </svg>
         <TooltipProvider>
           <div className="min-h-screen max-w-3xl mx-auto border-x-0">
-            <Header />
-            <div className="px-4 mt-8">
+            {/* <Header /> */}
+            {/* <div className="px-4 mt-8"> */}
+            <div className="px-4 mt-17">
               {children}
             </div>
             <Footer />

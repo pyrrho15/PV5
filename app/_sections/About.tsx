@@ -13,9 +13,8 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="font-sans text-[15px] flex flex-col gap-y-3 text-black md:text-balance">
-                <h2>I build full-stack applications, handling everything from design to deployment. I love exploring both the software and hardware worlds, and sometimes, I just don’t do anything at all.
-                </h2>
+            <div className="font-sans text-[15px] flex flex-col gap-y-3 text-black">
+                <h2>I build full-stack applications, handling everything from design to deployment. I love exploring both the software and hardware worlds and have an eye for design.</h2>
                 <h2>Currently working with Next.js, Arduino and learning design.</h2>
             </div>
 

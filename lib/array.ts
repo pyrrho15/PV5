@@ -65,14 +65,11 @@ export const experience = [
     period: "July 2026 - Present",
     current: true,
     description: [
-      "Architected and developed an internal tool into a production-ready SaaS product.",
-      "Built an AI-powered content planner that helped creators plan and schedule their posts.",
-      "Collaborated with the team as a backend developer to build an e-commerce platform for a client."
+      "Building an mobile application using ExpoGo.",
     ],
     techStack: [
       { name: "Expo", imgURL: "/tech-stack/expo.svg" },
       { name: "TypeScript", imgURL: "/tech-stack/typescript.svg" },
-      { name: "Firebase", imgURL: "/tech-stack/firebase.svg" }
     ]
   },
   {
@@ -99,7 +96,7 @@ export const experience = [
 
 export const projects = [
   {
-    name: "Aegis",
+    name: "Aegis (Building)",
     img: "/projects/demo.png",
     description: "It's a privacy-focused file storage app where you upload files that which gets encrypted server-side and stored in R2. You can share and download the files within the application.",
     link: ["", "https://github.com/pyrrho15/aegis"],
