@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Github01Icon, Link01Icon } from "@hugeicons/core-free-icons";
@@ -9,16 +10,34 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-export default function Projects() {
-    const featuredProjects = projects.filter(project => project.isFeatured);
+export default function ProjectsPage() {
+    const [selectedTag, setSelectedTag] = useState<string>("all");
+
+    const allTags = Array.from(new Set(projects.flatMap(project => project.tags)));
+
+    const filteredProjects = selectedTag === "all"
+        ? projects
+        : projects.filter(project => project.tags.includes(selectedTag));
 
     return (
-        <section className="space-y-7">
-            <h2 className="uppercase text-[16px] font-medium tracking-tight text-neutral-500">Featured Projects</h2>
+        <div className="min-h-screen max-w-3xl mx-auto px-4 py-8">
+            <div className="flex items-center justify-between mb-8">
+                <h1 className="text-2xl font-medium tracking-tight">Projects</h1>
+                <select
+                    value={selectedTag}
+                    onChange={(e) => setSelectedTag(e.target.value)}
+                    className="px-3 py-2 border border-neutral-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-neutral-500"
+                >
+                    <option value="all">All Tags</option>
+                    {allTags.map((tag) => (
+                        <option key={tag} value={tag}>{tag}</option>
+                    ))}
+                </select>
+            </div>
 
-            <div className="flex flex-row flex-wrap gap-4 items-stretch">
-                {featuredProjects.map((project) => (
-                    <div key={project.name} className="border border-neutral-300/90 shadow-[inset_0_0_4px_0px_rgba(0,0,0,0.1)] rounded-2xl max-w-90">
+            <div className="flex flex-row flex-wrap gap-6 items-stretch font-sans">
+                {filteredProjects.map((project) => (
+                    <div key={project.name} className="border border-neutral-300/90 shadow-[inset_0_0_4px_0px_rgba(0,0,0,0.1)] rounded-2xl max-w-90 flex-1 min-w-75">
 
                         {project.img && (
                             <div className="w-full h-45 overflow-hidden rounded-t-2xl">
@@ -63,6 +82,6 @@ export default function Projects() {
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     )
 }
