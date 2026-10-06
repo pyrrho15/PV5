@@ -16,7 +16,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="min-w-screen h-screen relative">
+      <body className="min-w-screen min-h-screen relative">
+
         <svg className="absolute mask-r-from-50% mask-l-from-50% inset-0 w-full h-full -z-1">
           <defs>
             <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
+        
         <TooltipProvider>
           <div className="min-h-screen max-w-3xl mx-auto border-x-0">
             {/* <Header /> */}
