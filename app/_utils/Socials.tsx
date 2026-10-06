@@ -46,7 +46,9 @@ export default function Socials() {
       </Tooltip> */}
       <Tooltip>
         <TooltipTrigger>
-          <HugeiconsIcon icon={GoogleDocIcon} color="currentColor" size={22} />
+          <a href="https://drive.google.com/file/d/1FVUOoco0-ruS22ww8HXeUdY50keVeFus/view?usp=sharing" target="_blank">
+            <HugeiconsIcon icon={GoogleDocIcon} color="currentColor" size={22} />
+          </a>
         </TooltipTrigger>
         <TooltipContent>
           <p>Resume</p>

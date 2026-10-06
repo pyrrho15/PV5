@@ -48,7 +48,7 @@ export default function Projects() {
                 </a>
             </div>
 
-            <div className="flex flex-row flex-wrap gap-4 items-stretch">
+            <div className="flex flex-row flex-wrap gap-4 items-stretch justify-center">
                 {featuredProjects.map((project) => (
                     <div key={project.name} className="border border-neutral-300/90 shadow-[inset_0_0_4px_0px_rgba(0,0,0,0.1)] rounded-2xl max-w-90">
 
