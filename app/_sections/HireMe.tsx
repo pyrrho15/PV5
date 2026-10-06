@@ -1,7 +1,28 @@
+"use client"
 import ContactForm from "@/app/_utils/ContactForm"
 import { ArrowRight } from "lucide-react"
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 function HireMe() {
+    const linkRef = useRef<HTMLAnchorElement>(null);
+    const arrowRef = useRef<SVGSVGElement>(null);
+
+    const { contextSafe } = useGSAP({ scope: linkRef });
+
+    const handleLinkEnter = contextSafe(() => {
+        if (arrowRef.current) {
+            gsap.to(arrowRef.current, { x: 4, duration: 0.3 });
+        }
+    });
+
+    const handleLinkLeave = contextSafe(() => {
+        if (arrowRef.current) {
+            gsap.to(arrowRef.current, { x: 0, duration: 0.3 });
+        }
+    });
+
     return (
         <div className="space-y-7 font-sans">
 
@@ -19,9 +40,17 @@ function HireMe() {
                             I can build from fancy websites to lame (like this one) or, are you confused with your requirements? Schedule a free 30-minute call.
                         </p>
                     </div>
-                    <a href="https://calendly.com/maheshh-kumarr05/30min" target="_blank" rel="noopener noreferrer" className="flex w-fit  items-center justify-center gap-x-3 bg-black text-white py-1.5 px-7 rounded-lg">
+                    <a
+                        ref={linkRef}
+                        href="https://calendly.com/maheshh-kumarr05/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex w-fit items-center justify-center gap-x-3 bg-black text-white py-1.5 px-7 rounded-lg"
+                        onMouseEnter={handleLinkEnter}
+                        onMouseLeave={handleLinkLeave}
+                    >
                         <p className="text-[16px] tracking-tight">Let's talk</p>
-                        <ArrowRight color="currentColor" size={18} />
+                        <ArrowRight color="currentColor" size={18} ref={arrowRef} />
                     </a>
                 </div>
 
