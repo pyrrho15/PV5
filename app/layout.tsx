@@ -26,12 +26,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
-        
+
         <TooltipProvider>
           <div className="min-h-screen max-w-3xl mx-auto border-x-0">
-            {/* <Header /> */}
-            {/* <div className="px-4 mt-8"> */}
-            <div className="px-4 mt-17">
+            <Header />
+            <div className="px-4 mt-8">
               {children}
             </div>
             <Footer />

@@ -15,7 +15,7 @@ export default function Writings() {
         gsap.set(".arrow", { opacity: 0, x: -16 })
         gsap.set(".writing-img", { opacity: 1 })
     }, { scope: container })
-    
+
     const handleEnter = contextSafe((e: React.MouseEvent<HTMLAnchorElement>) => {
         const arrow = e.currentTarget.querySelector(".arrow")
         if (arrow) {
@@ -64,7 +64,7 @@ export default function Writings() {
                     {writings.map((blog) => (
                         <a
                             key={blog.name}
-                            className="block relative"
+                            className="block relative group"
                             href={blog.link}
                             target="_blank"
                             onMouseEnter={(e) => handleEnter(e)}
@@ -82,12 +82,12 @@ export default function Writings() {
                                         />
                                     </div>
                                 )}
-                                <div className="group font-sans space-y-1.5 text-neutral-500/90">
+                                <div className="font-sans space-y-1.5 text-neutral-500/90">
                                     <div className="flex items-center gap-1">
                                         <h3 className="group-hover:text-neutral-500/90 transition-colors duration-300 text-black text-[17px] font-medium tracking-tight">
                                             {blog.name}
                                         </h3>
-                                        <ChevronsRight size={21} strokeWidth={2} color="#000000cc" className="arrow shrink-0 -rotate-x-45 mt-1" />
+                                        <ChevronsRight size={21} strokeWidth={2} color="#000000bb" className="arrow shrink-0 -rotate-x-45 mt-1" />
                                     </div>
 
                                     <p className="text-neutral-500/90 text-[15px]">{blog.description}</p>
