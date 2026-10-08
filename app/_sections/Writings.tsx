@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ChevronsRight } from "lucide-react"
 import { useRef } from 'react';
 import { writings } from "@/lib/array";
+import Image from "next/image";
 
 export default function Writings() {
     const container = useRef<HTMLDivElement>(null)
@@ -12,6 +13,7 @@ export default function Writings() {
 
     useGSAP(() => {
         gsap.set(".arrow", { opacity: 0, x: -16 })
+        gsap.set(".writing-img", { opacity: 1 })
     }, { scope: container })
     
     const handleEnter = contextSafe((e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -22,6 +24,14 @@ export default function Writings() {
                 opacity: 1,
                 duration: 0.3,
                 ease: "back.out(1.7)"
+            })
+        }
+        const img = e.currentTarget.querySelector(".writing-img") as HTMLElement | null
+        if (img) {
+            gsap.to(img, {
+                opacity: 0.8,
+                duration: 0.3,
+                ease: "power2.out"
             })
         }
     })
@@ -35,6 +45,14 @@ export default function Writings() {
                 ease: "back.in(1.7)"
             })
         }
+        const img = e.currentTarget.querySelector(".writing-img") as HTMLElement | null
+        if (img) {
+            gsap.to(img, {
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            })
+        }
     })
 
     return (
@@ -46,20 +64,35 @@ export default function Writings() {
                     {writings.map((blog) => (
                         <a
                             key={blog.name}
-                            className="group font-sans space-y-1.5 block relative text-neutral-500/90"
+                            className="block relative"
                             href={blog.link}
                             target="_blank"
                             onMouseEnter={(e) => handleEnter(e)}
                             onMouseLeave={(e) => handleLeave(e)}
                         >
-                            <div className="flex items-center gap-1">
-                                <h3 className="group-hover:text-neutral-500/90 transition-colors duration-300 text-black text-[17px] font-medium tracking-tight">
-                                    {blog.name}
-                                </h3>
-                                <ChevronsRight size={21} strokeWidth={2} color="#000000cc" className="arrow shrink-0 -rotate-x-45 mt-1" />
-                            </div>
+                            <div className="flex items-center space-x-4">
+                                {blog.img && (
+                                    <div className="shrink-0">
+                                        <Image
+                                            src={blog.img}
+                                            alt={blog.name}
+                                            width={55}
+                                            height={55}
+                                            className="object-cover rounded-md writing-img"
+                                        />
+                                    </div>
+                                )}
+                                <div className="group font-sans space-y-1.5 text-neutral-500/90">
+                                    <div className="flex items-center gap-1">
+                                        <h3 className="group-hover:text-neutral-500/90 transition-colors duration-300 text-black text-[17px] font-medium tracking-tight">
+                                            {blog.name}
+                                        </h3>
+                                        <ChevronsRight size={21} strokeWidth={2} color="#000000cc" className="arrow shrink-0 -rotate-x-45 mt-1" />
+                                    </div>
 
-                            <p className="text-neutral-500/90 text-[15px]">{blog.description}</p>
+                                    <p className="text-neutral-500/90 text-[15px]">{blog.description}</p>
+                                </div>
+                            </div>
                         </a>
                     ))}
                 </div>
