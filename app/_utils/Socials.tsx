@@ -34,16 +34,16 @@ export default function Socials() {
           <p>LinkedIn</p>
         </TooltipContent>
       </Tooltip>
-      {/* <Tooltip>
+      <Tooltip>
         <TooltipTrigger>
-          <a href="mailto:maheshkumarg1508@gmail.com">
+          <a href="mailto:maheshh.kumarr05@gmail.com">
             <HugeiconsIcon icon={MailAtSign01Icon} color="currentColor" size={22} />
           </a>
         </TooltipTrigger>
         <TooltipContent>
           <p>Email</p>
         </TooltipContent>
-      </Tooltip> */}
+      </Tooltip>
       <Tooltip>
         <TooltipTrigger>
           <a href="https://drive.google.com/file/d/1FVUOoco0-ruS22ww8HXeUdY50keVeFus/view?usp=sharing" target="_blank">
