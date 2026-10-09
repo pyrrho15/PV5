@@ -8,6 +8,7 @@ import gsap from 'gsap';
 function HireMe() {
     const linkRef = useRef<HTMLAnchorElement>(null);
     const arrowRef = useRef<SVGSVGElement>(null);
+    const shadowRef = useRef<HTMLDivElement>(null);
 
     const { contextSafe } = useGSAP({ scope: linkRef });
 
@@ -15,11 +16,17 @@ function HireMe() {
         if (arrowRef.current) {
             gsap.to(arrowRef.current, { x: 4, duration: 0.3 });
         }
+        if (shadowRef.current) {
+            gsap.to(shadowRef.current, { left: "120%", duration: 0.4, ease:"power4.out" });
+        }
     });
 
     const handleLinkLeave = contextSafe(() => {
         if (arrowRef.current) {
             gsap.to(arrowRef.current, { x: 0, duration: 0.3 });
+        }
+        if (shadowRef.current) {
+            gsap.to(shadowRef.current, { left: "-30px", duration: 0.4, ease:"power4.out" });
         }
     });
 
@@ -45,12 +52,16 @@ function HireMe() {
                         href="https://calendly.com/maheshh-kumarr05/30min"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex w-fit items-center justify-center gap-x-3 bg-black text-white py-1.5 px-7 rounded-lg"
+                        className="flex w-fit items-center justify-center gap-x-3 bg-black text-white py-2 px-7 rounded-lg relative overflow-hidden"
                         onMouseEnter={handleLinkEnter}
                         onMouseLeave={handleLinkLeave}
                     >
-                        <p className="text-[16px] tracking-tight">Let's talk</p>
-                        <ArrowRight color="currentColor" size={18} ref={arrowRef} />
+                        <div className="absolute z-15 inset-0 border-t-2 border-white/50 shadow-[inset_0_2px_12px_1px_rgba(255,255,255,0.5)]" />
+                        
+                        <div ref={shadowRef} className="absolute -left-8 blur-md shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] bg-white skew-x-40 z-10 w-3 h-full" />
+
+                        <p className="text-[15px] tracking-tight relative z-2">Let's talk</p>
+                        <ArrowRight color="currentColor" size={18} ref={arrowRef} className="relative z-15" />
                     </a>
                 </div>
 
