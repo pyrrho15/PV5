@@ -171,7 +171,7 @@ export const projects = [
     name: "Taimer",
     img: "/projects/taimer.png",
     description: "A lightweight desktop timer designed to help users stay aware of how long they spend on a task. The timer stays on top of other windows, keeping the elapsed time visible while you work. It provides a simple, distraction-free way to track task duration without constantly switching between applications.",
-    link: ["", "https://github.com/pyrrho15/Taimer"],
+    link: ["https://taimer-xi.vercel.app/", "https://github.com/pyrrho15/taimer-new"],
     techStack: [
       { name: "Electron", imgURL: "/tech-stack/electron.svg" },
       { name: "React", imgURL: "/tech-stack/reactjs.svg" }
