@@ -62,10 +62,10 @@ export const writings = [
 
 export const experience = [
   {
-    company: "Stealth",
+    company: "Stealth Team",
     img: "",
     position: "App Developer",
-    location: "Remote, Intern",
+    location: "Remote",
     period: "July 2026 - Present",
     current: true,
     description: [
